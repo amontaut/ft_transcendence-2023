@@ -1,0 +1,58 @@
+.PopupRequestBackground {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    /*cursor: pointer;*/
+}
+
+.PopupRequest {
+    background-color: var(--color-container);
+    width: 500px;
+    max-width: 500px;
+    height: max-content;
+
+    padding: 8px 20px 20px 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 80vh));
+    transition: transform 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+    .Register {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .PopupRequest {
+        width: 300px;
+    }
+
+    .PopupRequest > div {
+        font-size: 24px;
+    }
+
+    .PopupRequest > input {
+        font-size: 24px;
+    }
+
+    .PopupRequest > button {
+        font-size: 22px;
+    }
+}

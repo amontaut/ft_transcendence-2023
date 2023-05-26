@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+    frontend:
+        depends_on:
+             - backend
+        container_name: client
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        image: node:18.14-alpine
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./frontend:/app
+        environment:
+            - REACT_APP_IP=${IP}
+            - REACT_APP_PORT_FRONT=${PORT_FRONT}
+            - REACT_APP_PORT_BACK=${PORT_BACK}
+
+    backend:
+        container_name: backend
+        depends_on:
+             - postgres
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        # image: server
+        image: node:18.14-alpine
+        ports:
+            - "8080:8080"
+            - "3001:3001"
+        volumes:
+            - ./backend:/app
+        environment:
+            - IP=${IP}
+            - PORT_FRONT=${PORT_FRONT}
+            - PORT_BACK=${PORT_BACK}
+            - AUTH_42_REDIRECT_URI=${AUTH_42_REDIRECT_URI}
+            - CLIENT_KEY=${CLIENT_KEY}
+            - SECRET_KEY=${SECRET_KEY}
+            - POSTGRES_IP=postgres
+            - POSTGRES_PORT=${POSTGRES_PORT}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+
+    postgres:
+        image: postgres:14.1-alpine
+        restart: always
+        hostname: postgres
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+        ports:
+            - "5432:5432"
+        volumes:
+            - postgres:/var/lib/postgresql/data
+volumes:
+    postgres:
+    name: null

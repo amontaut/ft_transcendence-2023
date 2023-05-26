@@ -1,0 +1,38 @@
+input {
+    font-size: 28px;
+    color: var(--color-text);
+    background: var(--color-background);
+    border: 4px solid var(--color-background);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Poppins;
+}
+
+input::placeholder {
+    font-weight: 300;
+}
+
+input:focus {
+    outline: none;
+}
+
+.TextEntry {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    /*background-color: white;*/
+}
+
+.TextEntryInput {
+    width: calc(100% - 30px);
+}
+
+@media (max-width: 1000px) {
+    input {
+        font-size: 22px;
+        height: 20px;
+    }
+}

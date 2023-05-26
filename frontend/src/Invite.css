@@ -1,0 +1,53 @@
+.Invite {
+    background-color: var(--color-container);
+    /*width: max-content;*/
+    /*max-width: 500px;*/
+    height: max-content;
+
+    padding: 8px 20px 20px 20px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    margin: auto;
+    margin-top: 20px;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 80vh));
+    transition: transform 0.2s ease-in-out;*/
+    flex: 1;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .Invite {
+        min-width: 510px;
+        flex: unset;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .Invite {
+        min-width: 240px;
+    }
+
+    .Invite > div {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .Invite > div > button {
+        font-size: 15px;
+        min-width: unset;
+        border-radius: 5px;
+        padding: 2px 10px;
+    }
+}

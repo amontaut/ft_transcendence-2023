@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    font-family: Poppins, Arial;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+
+.react-toggle {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    --color-background: #ffffff;
+    --color-container: #f8f9fa;
+    --color-text: #2c2c2c;
+    --color-border: #4B5AF9;
+    --color-discord: #4B5AF9;
+    --color-variant: #b5bac1;
+    --box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+body.dark {
+--color-background: #1f1f1f;
+--color-container: #2c2c2c;
+--color-text: #ffffff;
+--color-border: none;
+--color-discord: #4B5AF9;
+--color-variant: #3c3c3c;
+--box-shadow: none;
+}
+
+body {
+    background-color: var(--color-background);
+    box-shadow: var(--box-shadow);
+  }
+
+  body.dark {
+    background-color: var(--color-background);
+  }
+
+ button:active
+  {
+    opacity: 0.7;
+  }
+  
+.App {
+    position: relative;
+    background-color: var(--color-background);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+
+    font-size: 64px;
+    font-weight: 700;
+
+    background: linear-gradient(90deg, #4B5AF9 0%, #4B28FD 100%);
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.Pong-Logo {
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+button {
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.Button {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-discord);
+    height: max-content;
+    margin: 10px;
+    padding: 5px 20px;
+    font-size: 40px;
+}
+
+.Button:hover {
+    background-color: var(--color-discord);
+}
+
+.Login {
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.Title {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.AppLoading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+
+    font-size: 70px;
+    font-weight: 700;
+
+    animation: fadein 2s ease-in-out infinite;
+    user-select: none;
+}
+
+.leftHeader
+{
+  height: 100%;
+  display: flex;
+    align-items: center;
+}
+
+.rightHeader
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.rightHeader > div > p
+{
+  color:#ffffff;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.toggleMode
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.toggleMode > p
+{
+  margin :0;
+}
+
+.toggleMode > div
+{
+display: flex;
+}
+
+
+
+@media screen and (max-width: 820px) {
+    .Header {
+        height: 90px;
+        font-size: 32px;
+    }
+
+    .toggleMode > p {
+        display: none;
+    }
+
+    .Button {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .Pong-Logo {
+        display: none;
+    }
+
+    .Header {
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .Button {
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+}

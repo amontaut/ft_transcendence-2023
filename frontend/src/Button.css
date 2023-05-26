@@ -1,0 +1,19 @@
+.ButtonContainers {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-discord);
+    height: max-content;
+    padding: 5px 0 5px 0;
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ButtonContainers:hover {
+    background-color: var(--color-discord);
+}

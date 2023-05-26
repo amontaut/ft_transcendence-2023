@@ -1,0 +1,13 @@
+.TitleContainers {
+    font-size: 44px;
+    text-align: left;
+    width: 100%;
+    user-select: none;
+    font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+    .TitleContainers {
+        font-size: 34px;
+    }
+}

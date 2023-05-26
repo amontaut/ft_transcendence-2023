@@ -1,0 +1,31 @@
+.ContextMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    width: 200px;
+    height: max-content;
+
+    background-color: var(--color-variant);
+
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.ContextMenuAction {
+    width: calc(100% - 10px);
+    border-radius: 4px;
+    padding-left: 10px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.ContextMenuAction:hover {
+    background-color: var(--color-discord);
+}

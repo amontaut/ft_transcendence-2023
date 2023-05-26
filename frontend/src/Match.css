@@ -1,0 +1,189 @@
+.Match {
+    width: max-content;
+    height: max-content;
+    background-color: var(--color-container);
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    min-width: 500px;
+}
+
+.Match:hover
+{
+    box-shadow: none;
+}
+
+.MatchHeader {
+    display: flex;
+    align-items: center;
+}
+
+/* .MatchReturn {
+    height: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: #1F1F1F;
+    cursor: pointer;
+
+    margin-left: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.MatchReturn:Hover {
+    background-color: #4B5AF9;
+} */
+
+.MatchContainers {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 10px;
+
+    row-gap: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+
+.MatchDetail {
+    width: 500px;
+    height: max-content;
+    background-color: var(--color-background);
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row
+}
+
+.MatchIcon {
+    width: 60px;
+    height: 60px;
+    background-color:var(--color-container);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.MatchIcon > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.MatchInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.MatchResult {
+    font-size: 24px;
+    font-weight: bold;
+    color: #69FF8A;
+    line-height: 28px;
+
+    display: flex;
+    align-items: center;
+}
+
+.MatchScore {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.MatchName {
+    color: #767676;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.MatchActionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.MatchAction {
+    height: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--color-container);
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MatchAction:hover {
+    background-color: var(--color-discord);
+}
+
+.MatchAction > img {
+    width: 18px;
+    height: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Match {
+        min-width: 530px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MatchDetail {
+        width: 240px;
+        padding: 10px 0;
+    }
+
+    .MatchHeader > div {
+        font-size: 26px;
+    }
+
+    .MatchIcon {
+        width: 26px;
+        height: 26px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .MatchAction {
+        width: 26px;
+        height: 26px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .MatchAction > img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .MatchResult {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .MatchName {
+        font-size: 8px;
+        line-height: 8px;
+    }
+
+    .Match {
+        min-width: 260px;
+    }
+}
